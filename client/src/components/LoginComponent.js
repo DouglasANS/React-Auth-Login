@@ -1,14 +1,15 @@
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import Axios from 'axios';
 import styles from '../styles/Login.module.css'
-import { AuthContext } from '../context/AuthContext'
 import { saveToken } from '../context/tokenService';
+import { Redirect } from 'react-router-dom'
 
 export default function LoginComponent() {
-  const auth = useContext(AuthContext)
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  const [valor, setvalor] = useState(false)
   
 
   function checkLogin(){
@@ -16,22 +17,22 @@ export default function LoginComponent() {
       userEmail: email,
       userPassword: password,
     }).then((response) => {
-        
+      
         if(response.data.message){
           //Não encontrado
-          console.log('1' + response.data.message)
-          console.log('email: ' + email + '  Senha: ' + password)
+         // console.log('email: ' + email + '  Senha: ' + password)
         }else{          
           //Usuário encontrado 
-          auth.setLogin(true)
-          console.log('3' + auth.login)
+          //auth.setLogin(true)
           saveToken(email)
+          setvalor(true)
         }
     })
   }
 
-
-
+  if (valor) {
+    return <Redirect to='/dashboard' />
+   }
 
   return (
     <div className={styles.container}>
@@ -53,7 +54,7 @@ export default function LoginComponent() {
             </div>
             
             <div>
-                <a href="/dashboard"><button onClick={checkLogin}>Login</button></a>
+                <button onClick={checkLogin}>Login</button>
             </div>
 
            
@@ -76,9 +77,8 @@ export default function LoginComponent() {
 
 
 
-    
+      
         
     </div>
   )
 }
-  //<img src='imglogin.jpg' alt="Video_call"/>

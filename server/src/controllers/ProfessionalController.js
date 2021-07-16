@@ -111,5 +111,25 @@ module.exports = {
         } catch (error) {
             next(error)
         }
-    }    
+    },
+    async checkEmail(req, res, next){
+        try{
+            const { userEmail } = req.body
+
+            var result = await knex('healthprofessional').where('email', userEmail)
+            
+           
+            if(result == ""){
+                return res.send({message: 'user not found'})
+            }else{
+                return res.send(result)
+               
+            }
+                 
+            console.log(userEmail, userPassword)
+            
+        } catch (error) {
+            next(error)
+        }
+    }      
 }

@@ -1,20 +1,37 @@
-import React, { useEffect  } from 'react'
+import React, { useEffect, useState  } from 'react'
 import DashBoardComponent from '../components/DashboardComponent'
 import { Redirect  } from "react-router-dom";
-import { getToken } from '../context/tokenService';
+import Axios from 'axios';
 
 export default function DashBoard(){
 
-    useEffect(() => {
-        console.log('dashbiard')
-        var token = getToken('token')
-      });
+    const [valor1, setvalor1] = useState(false)
+    const token = window.localStorage.getItem('token')
 
-      if(token)
+      function checkLogin(email){
+            Axios.post ('http://localhost:3002/api/checkEmail',{
+            userEmail: email,
+        }).then((response) => {
+            if(response.data.message){
+              //Não encontrado
+              console.log('Estou em dasboard1')
+            }else{          
+              //Usuário encontrado 
+              setvalor1(true)
+              console.log('Estou em dasboard2 aqui?')
+              console.log('valor1:  ' +valor1)
+            }
+        })
+      }
+
+      useEffect(() => {
+        checkLogin(token)
+       
+      },[valor1]);
 
     return(
         <div>
-            { false ? 
+            { true ? 
             (
             <DashBoardComponent />
             ) : (

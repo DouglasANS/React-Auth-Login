@@ -7,6 +7,7 @@ const UserController = require('./src/controllers/AdmController')
 routes.get('/api/get', ProfessionalController.index)
 routes.post('/api/insert', ProfessionalController.create)
 routes.post('/api/login', ProfessionalController.checkLogin)
+routes.post('/api/checkEmail', ProfessionalController.checkEmail)
 
 routes.get('/api/adm/get', UserController.index)
 routes.post('/api/adm/insert', UserController.create)

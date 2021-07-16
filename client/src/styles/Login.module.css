@@ -1,0 +1,92 @@
+
+.container{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.login input {
+    margin-top: 40px;
+    border: 0;
+    border-bottom: 2px solid #9e9e9e;
+    outline: none;
+    box-sizing: border-box;
+    width: 400px;
+
+}
+
+.login input:focus {
+    border-bottom: 2px solid #26a69a;
+      
+}
+.logo{
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background: url(../assets/logosalvus.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+}
+
+.image{
+    background: url(../assets/imgcuidadosalvus.png);
+    background-position: center;
+    background-size: cover;
+    height: 757px;
+    width: 50%;
+}
+
+
+.login{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    flex: 1;
+    height: 750px;
+    width: 400px;
+}
+
+.login button {
+    font-weight:bold;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 16px;
+    height: 50px;
+    width: 250px;
+    border: 2px;
+    background-color: rgb(168, 212, 150);
+}
+
+.login button:hover {
+    background-color: rgb(125, 180, 118);
+  
+}
+
+.login h3 {
+    color: rgb(46, 88, 35);
+    font-size: 16px;
+    font-weight:normal;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.login h1{
+    color: rgb(36, 75, 26);
+}
+
+.login h2{
+    color: rgb(64, 146, 44);
+}
+
+
+/*
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+*/
+

@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    background-color: rgb(123, 179, 139);
+}
+
+.container h3{
+    font-size: 16px;
+    font-weight:normal;
+}

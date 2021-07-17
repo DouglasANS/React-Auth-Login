@@ -21,3 +21,4 @@ export function CountRequest(){
         //setFonoaudiologia(response.data)
         })
 }
+

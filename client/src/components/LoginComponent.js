@@ -68,7 +68,7 @@ export default function LoginComponent() {
                 do país, de forma rápida e segura.
             </h3>
             <div >
-                <a href="/registerProfessional"><button>Register</button></a>
+                <a href="/register1"><button>Register</button></a>
             </div>
 
         </div>

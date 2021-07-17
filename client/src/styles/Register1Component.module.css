@@ -1,0 +1,25 @@
+.container{
+    background-color: blanchedalmond;
+    display: flex;
+    height: 756px;
+    justify-content: center;
+ 
+    
+}
+
+.caixa{
+    
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    background-color: rgb(54, 80, 80);
+    width: 400px;
+    
+    border-radius: 30px;
+}
+
+.caixa input{
+    outline: none;
+}

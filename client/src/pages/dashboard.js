@@ -27,7 +27,7 @@ export default function DashBoard(){
       useEffect(() => {
         checkLogin(token)
        
-      },[valor1]);
+      },);
 
     return(
         <div>

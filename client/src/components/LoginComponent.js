@@ -19,6 +19,7 @@ export default function LoginComponent() {
     }).then((response) => {
       
         if(response.data.message){
+          alert('Usuário e/ou senha inválidos')
           //Não encontrado
          // console.log('email: ' + email + '  Senha: ' + password)
         }else{          

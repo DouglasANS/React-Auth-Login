@@ -4,8 +4,8 @@ module.exports = {
     async index(req, res) { 
 
         const results = await knex.select('*').from('healthprofessional')
-        
         return res.json(results)
+        
     },
     async create(req, res, next){
         try {
@@ -131,5 +131,23 @@ module.exports = {
         } catch (error) {
             next(error)
         }
-    }      
+    },
+    async countMedico(req, res) { 
+
+        const resultMedico = await knex('healthprofessional')
+        .count('profissao' , {as: 'a'})
+        .where('profissao', 'medico')
+
+        
+        const resultEnfermeiro = await knex('healthprofessional')
+        .count('profissao' , {as: 'a'})
+        .where('profissao', 'enfermeiro')
+
+        var valor = [resultMedico, resultEnfermeiro]
+
+
+        
+        return res.json(resultMedico)
+    },
+    //SELECT count(*) FROM produtos      
 }

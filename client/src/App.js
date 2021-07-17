@@ -1,6 +1,7 @@
 import './App.css';
 import {Switch, Route} from 'react-router-dom'
 import AuthProvider from './context/AuthContext';
+import RegisterProvider from './context/RegisterContext';
 import RegisterAdm from './pages/RegisterAdm';
 import Pagina2 from './pages/page2';
 import Login from './pages/Login';
@@ -15,13 +16,15 @@ function App() {
     </header>
     <main>
       <AuthProvider>
-        <Switch>
-          <Route path='/' exact component={Login}/>
-          <Route path='/registerAdm' component={RegisterAdm}/>
-          <Route path='/registerProfessional' component={RegisterProfessional}/>
-          <Route path='/pag2' component={Pagina2}/>
-          <Route path='/dashboard' component={DashBoard}/>
-        </Switch>
+        <RegisterProvider>
+          <Switch>
+            <Route path='/' exact component={Login}/>
+            <Route path='/registerAdm' component={RegisterAdm}/>
+            <Route path='/registerProfessional' component={RegisterProfessional}/>
+            <Route path='/pag2' component={Pagina2}/>
+            <Route path='/dashboard' component={DashBoard}/>
+          </Switch>
+        </RegisterProvider>
       </AuthProvider>
     </main>
     </>

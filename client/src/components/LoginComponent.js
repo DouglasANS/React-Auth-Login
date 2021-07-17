@@ -4,13 +4,12 @@ import styles from '../styles/Login.module.css'
 import { saveToken } from '../context/tokenService';
 import { Redirect } from 'react-router-dom'
 
+
 export default function LoginComponent() {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-
   const [valor, setvalor] = useState(false)
-  
 
   function checkLogin(){
     Axios.post ('http://localhost:3002/api/login',{
@@ -30,6 +29,8 @@ export default function LoginComponent() {
         }
     })
   }
+ 
+
 
   if (valor) {
     return <Redirect to='/dashboard' />
@@ -42,7 +43,7 @@ export default function LoginComponent() {
           </div>
         <div className={styles.login}>
             <div className={styles.logo}></div>
-              <h2>Bem vindo!</h2>
+              <h2>Bem vindo! </h2>
                 <h3>Conectando a Saúde para melhorar a Vida das pessoas.</h3>
                 <h1>Login</h1>
             <div >

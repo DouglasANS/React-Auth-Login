@@ -54,32 +54,35 @@ export default function Register1Component(){
     return(
         <div className={styles.container}>
             <div className={styles.caixa}>
-                <div>
-                    <label>Nome: <input type="text"  onChange={(e)=>{setUsername(e.target.value)}}/></label>
-                </div>
-                <div>
-                    <label>Data: <input type="date" onChange={(e)=>{setDate(e.target.value)}}/></label>
-                </div>
-                <div>
-                    <label>E-mail:  <input type="email"  onChange={(e)=>{setEmail(e.target.value)}}/></label>
-                </div>
-                <div>
-                    <label>CPF: <input type="text" onChange={(e)=>{setCpf(e.target.value)}}/></label>
-                </div>
-                <div>
-                    <label>Telefone: <input type="text"  onChange={(e)=>{setTelefone(e.target.value)}}/></label>
-                </div>
-                <div>
-                    <label>password:  <input type="password" onChange={(e)=>{setPassword(e.target.value)}}/></label>
-                </div>
-                <div>
+            
+                <label>Nome: </label>
+                <input type="text"  onChange={(e)=>{setUsername(e.target.value)}}/>
+            
+                <label>Data de Nascimento: </label>
+                <input type="date" onChange={(e)=>{setDate(e.target.value)}}/>
+            
+                <label>E-mail:  </label>
+                <input type="email"  onChange={(e)=>{setEmail(e.target.value)}}/>
+
+            
+                <label>CPF:</label>
+                <input type="text" onChange={(e)=>{setCpf(e.target.value)}}/>
+            
+                <label>Telefone:</label>
+                <input type="text"  onChange={(e)=>{setTelefone(e.target.value)}}/>
+                
+                <label>password:  </label>
+                <input type="password" onChange={(e)=>{setPassword(e.target.value)}}/>
+                
                 <label>Sexo: </label>
-                    <select onChange={(e)=>{setSexo(e.target.value)}}>
+                <select onChange={(e)=>{setSexo(e.target.value)}}>
                     <option value="masculino">Masculino</option>
                     <option value="feminino">Feminino</option>
-                    </select>
+                </select>
+                <div className={styles.buttonProximo}>
+                    
+                <button  onClick={nextRegister1}>Próximo</button>
                 </div>
-                <button onClick={nextRegister1}>Próximo</button>
             </div>
         </div>
     )

@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { RegisterContext } from '../context/RegisterContext'
 import { Redirect } from 'react-router-dom';
+import styles from '../styles/Register3Component.module.css'
+
 const { isEmpty } = require('lodash');
 
 export default function Register3Component(){
@@ -33,7 +35,8 @@ export default function Register3Component(){
 
 
     return(
-        <div>
+        <div className={styles.container}>
+              <div className={styles.caixa}>
             <div>
                 <label>Profissão: </label>
                 <select onChange={(e)=>{setProfissao(e.target.value)}}>
@@ -45,7 +48,11 @@ export default function Register3Component(){
                 <label>Numero de Registro: </label>
                 <input type="text" onChange={(e)=>{setNumRegistro(e.target.value)}}/>
             </div>
-            <button onClick={nextRegister3}>Próximo</button>
+
+            <div className={styles.buttonProximo}>
+                <button onClick={nextRegister3}>Finalizar</button>
+            </div>
+            </div>
         </div>
     )
 }

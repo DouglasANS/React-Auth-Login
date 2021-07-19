@@ -8,7 +8,7 @@ export default function FooterComponent(){
             
         <div className="tamanhotamanho_1">
             <h1>Salvus.</h1>
-            <h3>Criamos websites incríveis</h3>
+            <h3>Saúde em sua casa</h3>
         </div>
         <div className="tamanho">
             <h2>Sobre</h2>

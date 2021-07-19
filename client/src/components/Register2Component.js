@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import { RegisterContext } from '../context/RegisterContext'
 import { Redirect } from 'react-router-dom';
 import Axios from 'axios';
+import styles from '../styles/Register2Component.module.css'
+
 const { isEmpty } = require('lodash');
 
 export default function Register2Component(){
@@ -58,29 +60,29 @@ export default function Register2Component(){
         }
 
     return(
-        <div>
-           
-            <div>
-                <label>Cep: <input type="text" onChange={(e)=>{setCep(e.target.value)}}/></label> 
+        <div className={styles.container}>
+            <div className={styles.caixa}>
+                <label>Cep: </label> 
+                <input type="text" onChange={(e)=>{setCep(e.target.value)}}/>
                 <button onClick={RequestCepV}>Consultar CEP</button>
-            </div>
-            <div>
+            
                 <label>Logradouro: </label>
                 <input type="text" name="logradouro"  onChange={(e)=>{setLogradouro(e.target.value)}}/>
-            </div>
-            <div>
+            
                 <label>Cidade: </label>
                 <input type="text" name="cidade"  onChange={(e)=>{setCidade(e.target.value)}}/>
-            </div>
-            <div>
+           
                 <label>Bairro: </label>
                 <input type="text" name="bairro"  onChange={(e)=>{setBairro(e.target.value)}}/>
-            </div>
-            <div>
+            
                 <label>Número Casa: </label>
                 <input type="text" onChange={(e)=>{setNumCasa(e.target.value)}}/>
+
+                <div className={styles.buttonProximo}>
+                       <button onClick={nextRegister2}>Próximo</button>
+                </div>
             </div>
-            <button onClick={nextRegister2}>Próximo</button>
+         
         </div>
     )
 }

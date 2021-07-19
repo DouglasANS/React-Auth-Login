@@ -53,7 +53,7 @@ export default function LoginComponent() {
             <div>
                 <input placeholder="Password"  type="password" onChange={(e)=>{setPassword(e.target.value)}}/>
             </div>
-            <a href="/register1"><div>
+            <a href="/ForgotPassword"><div>
               Esqueceu a senha?
             </div></a>
             

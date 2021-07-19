@@ -3,7 +3,7 @@ const express = require('express')
 const routes = express.Router() 
 
 const ProfessionalController = require('./src/controllers/ProfessionalController')
-const UserController = require('./src/controllers/AdmController')
+
 const CountProfessionalController = require('./src/controllers/CountProfessionalController')
 
 routes.get('/api/get', ProfessionalController.index)
@@ -23,9 +23,6 @@ routes.post('/api/imagema', CountProfessionalController.imagema)
 
 
 
-
-routes.get('/api/adm/get', UserController.index)
-routes.post('/api/adm/insert', UserController.create)
 
 
 //routes.put('/api/update', UserController.update)

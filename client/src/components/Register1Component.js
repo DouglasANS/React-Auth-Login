@@ -54,6 +54,7 @@ export default function Register1Component(){
     return(
         <div className={styles.container}>
             <div className={styles.caixa}>
+                
             
                 <label>Nome: </label>
                 <input type="text"  onChange={(e)=>{setUsername(e.target.value)}}/>

@@ -4,6 +4,7 @@ import styles from '../styles/HeaderComponent.module.css'
 
 import { AuthContext } from '../context/AuthContext';
 export default function HeaderComponent(){
+    
 
     const { currentUser } = useContext(AuthContext)
     return(

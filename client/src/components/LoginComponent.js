@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Axios from 'axios';
 import styles from '../styles/Login.module.css'
-import { saveToken } from '../context/tokenService';
+import { saveToken, saveCurrentUser, saveCurrentEmail } from '../Request/tokenService';
 import { Redirect } from 'react-router-dom'
 
 
@@ -24,6 +24,7 @@ export default function LoginComponent() {
         }else{          
           //Usuário encontrado 
           //auth.setLogin(true)
+          saveCurrentEmail(email)
           saveToken(email)
           setvalor(true)
         }
@@ -46,14 +47,15 @@ export default function LoginComponent() {
               <h2>Bem vindo! </h2>
                 <h3>Conectando a Saúde para melhorar a Vida das pessoas.</h3>
                 <h1>Login</h1>
-            <div >
-                
+            <div>
                 <input placeholder="Email" type="email"  onChange={(e)=>{setEmail(e.target.value)}}/>
-               
             </div>
             <div>
                 <input placeholder="Password"  type="password" onChange={(e)=>{setPassword(e.target.value)}}/>
             </div>
+            <a href="/register1"><div>
+              Esqueceu a senha?
+            </div></a>
             
             <div>
                 <button onClick={checkLogin}>Login</button>

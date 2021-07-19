@@ -10,6 +10,7 @@ routes.get('/api/get', ProfessionalController.index)
 routes.post('/api/insert', ProfessionalController.create)
 routes.post('/api/login', ProfessionalController.checkLogin)
 routes.post('/api/checkEmail', ProfessionalController.checkEmail)
+routes.get('/api/SelectUserLogin/:currentEmail', ProfessionalController.SelectUserLogin)
 
 // ---------  Count  ---------
 routes.get('/api/countAll', CountProfessionalController.allGet)

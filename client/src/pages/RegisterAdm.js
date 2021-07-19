@@ -5,6 +5,13 @@ import Axios from 'axios';
 export default function Pagina1(){
     const auth = useContext(AuthContext)
 
+    // APAGAR ESSE AQUIVO
+    // APAGAR ESSE AQUIVO
+    // APAGAR ESSE AQUIVO
+    // APAGAR ESSE AQUIVO
+    // APAGAR ESSE AQUIVO// APAGAR ESSE AQUIVO
+    // APAGAR ESSE AQUIVO
+    // APAGAR ESSE AQUIVO
     
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')

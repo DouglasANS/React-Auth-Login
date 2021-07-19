@@ -132,22 +132,14 @@ module.exports = {
             next(error)
         }
     },
-    async countMedico(req, res) { 
+    async SelectUserLogin(req, res) { 
 
-        const resultMedico = await knex('healthprofessional')
-        .count('profissao' , {as: 'a'})
-        .where('profissao', 'medico')
+        const {currentEmail} = req.params
 
+        const results = await knex.select('*').from('healthprofessional').where('email', currentEmail)
         
-        const resultEnfermeiro = await knex('healthprofessional')
-        .count('profissao' , {as: 'a'})
-        .where('profissao', 'enfermeiro')
-
-        var valor = [resultMedico, resultEnfermeiro]
-
-
+        return res.json(results)
         
-        return res.json(resultMedico)
     },
     //SELECT count(*) FROM produtos      
 }

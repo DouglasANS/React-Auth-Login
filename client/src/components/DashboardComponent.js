@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import Axios from 'axios';
-
+import React, { useContext, useEffect, useState } from 'react'
+import {CountRequest} from '../Request/CountGetRequest'
 import styles from '../styles/Dashboard.module.css'
+import { AuthContext } from '../context/AuthContext';
 
 export default function DashBoardComponent(){
 
@@ -10,55 +10,25 @@ export default function DashBoardComponent(){
     const [tecnicoEnfermagem, setTecnicoEnfermagem] = useState([])
     const [fonoaudiologia, setFonoaudiologia] = useState([])
 
+    const {currentUserData} = useContext(AuthContext)
+    
 
     useEffect(()=>{
-        Axios.get ('http://localhost:3002/api/countMedico').then((response) => {
-        console.log(response.data)
-        setMedico(response.data)
-        })
-
-        Axios.get ('http://localhost:3002/api/countEnfermeiro').then((response) => {
-        console.log(response.data)
-        setEnfermeiro(response.data)
-        })
-
-        Axios.get ('http://localhost:3002/api/countTecnicoEnfermagem').then((response) => {
-        console.log(response.data)
-        setTecnicoEnfermagem(response.data)
-        })
-
-        Axios.get ('http://localhost:3002/api/countFonoaudiologia').then((response) => {
-        console.log(response.data)
-        setFonoaudiologia(response.data)
-        })
- 
+       CountRequest(setMedico, setEnfermeiro, setTecnicoEnfermagem, setFonoaudiologia)
+       currentUserData()
     },[])
 
-    
+ 
 
     
     return(  
         <div className={styles.container}>
-            
-            {medico.map((val) => { return (
-                    <>
-                        <h1 key={1}>Medico : {val.a}</h1>
-                    </>)})}
-            {enfermeiro.map((val) => { return (
-                    <>
-                        <h1 key={2}>enfermeiro : {val.a}</h1>
-                    </>)})} 
-            {tecnicoEnfermagem.map((val) => { return (
-                    <>
-                        <h1 key={3}>tecnicoEnfermagem : {val.a}</h1>
-                    </>)})} 
-            {fonoaudiologia.map((val) => { return (
-                    <>
-                        <h1 key={4}>fonoaudiologia : {val.a}</h1>
-                    </>)})} 
-
-
-
+            <h1>medico: {medico}</h1>
+            <h1>enfermeiro: {enfermeiro}</h1>
+            <h1>tecnicoEnfermagem :{tecnicoEnfermagem}</h1>
+            <h1>fonoaudiologia: {fonoaudiologia}</h1>
+     
+     
 
         </div>
     )

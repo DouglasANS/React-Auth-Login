@@ -20,7 +20,19 @@ export default function Register() {
   const [numregistro, setNumRegistro] = useState('')
 
   console.log(date)
-  
+  // APAGAR ESSE AQUIVO// APAGAR ESSE AQUIVO
+  // APAGAR ESSE AQUIVO
+  // APAGAR ESSE AQUIVO
+  // APAGAR ESSE AQUIVO
+  // APAGAR ESSE AQUIVO// APAGAR ESSE AQUIVO
+
+  // APAGAR ESSE AQUIVO
+  // APAGAR ESSE AQUIVO
+
+  // APAGAR ESSE AQUIVO
+
+  // APAGAR ESSE AQUIVO
+  // APAGAR ESSE AQUIVO
 
   function cadastrarProfissional(){
     console.log("testando")

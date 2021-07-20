@@ -24,6 +24,7 @@ routes.post('/api/imagema', CountProfessionalController.imagema)
 
 
 routes.post('/api/sendEmailto/:changeEmail/:randomNumber', SendEmailController.sendEmailto)
+routes.put('/api/Mudarsenha/:Email/:codVerification/:newPassword', SendEmailController.ChangePassword)
 
 
 

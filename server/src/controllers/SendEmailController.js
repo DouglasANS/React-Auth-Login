@@ -19,11 +19,18 @@ module.exports = {
         }
     })
     
+     
+    var result = await knex('healthprofessional').where('email', changeEmail)
+    console.log(result)
+        
+    if(result == ""){
+        return res.send({message: 'user not found'})
+    }else{
         const mailSend = await transporter.sendMail({
             from: "Douglas Agostinho <suportdesenvolvedoremail@gmail.com>",
             to: changeEmail,
             subject: "Projeto salvus requisição de uma nova senha",
-            text: "Esse é seu codigo para mudar a senha: " + randomNumber ,
+            text: "Esse é o seu código para mudar a senha: " + randomNumber ,
         })
 
         await knex('healthprofessional')
@@ -34,11 +41,31 @@ module.exports = {
         
 
         return res.json(mailSend)
+    }
+
+
     
-    } catch (error) {
+        } catch (error) {
         next(error)
     }
         
+    },
+
+    async ChangePassword(req, res) { 
+        try {
+        const {Email} = req.params
+        const {codVerification} = req.params
+        const {newPassword} = req.params
+
+       
+        const results = await knex('healthprofessional')
+        .where('email','=' , Email ).where('randomnumber','=' , codVerification )
+        .update({ password: newPassword })
+        
+        return res.json(results)
+    } catch (error) {
+        next(error)
+    }
     },
   
 

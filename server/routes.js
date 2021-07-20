@@ -11,7 +11,8 @@ routes.post('/api/insert', ProfessionalController.create)
 routes.post('/api/login', ProfessionalController.checkLogin)
 routes.post('/api/checkEmail', ProfessionalController.checkEmail)
 routes.get('/api/SelectUserLogin/:currentEmail', ProfessionalController.SelectUserLogin)
-
+routes.put('/api/update/:id/:localidadedeatuacao/:deslocamentomax/:password', ProfessionalController.update)
+routes.delete('/api/delete/:idUsuario', ProfessionalController.delete),
 // ---------  Count  ---------
 routes.get('/api/countAll', CountProfessionalController.allGet)
 routes.get('/api/countMedico', CountProfessionalController.countMedico)
@@ -30,8 +31,6 @@ routes.put('/api/Mudarsenha/:Email/:codVerification/:newPassword', SendEmailCont
 
 
 
-//routes.put('/api/update', UserController.update)
-//routes.delete('/api/delete/:idUsuario', UserController.delete),
 
 
 

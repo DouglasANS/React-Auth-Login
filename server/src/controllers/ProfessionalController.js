@@ -71,17 +71,23 @@ module.exports = {
     },
     async update(req, res, next){
         try {
+            const { id } = req.params
+            const { localidadedeatuacao } = req.params
+            const { deslocamentomax } = req.params
+            const { password } = req.params
 
+            await knex('healthprofessional')
+            .where('id','=' , id )
+            .update({ localidadedeatuacao: localidadedeatuacao })
             
-            const { userid } = req.body
-            const { userEmail } = req.body
+            await knex('healthprofessional')
+            .where('id','=' , id )
+            .update({deslocamentomax: deslocamentomax})
 
-            console.log(userid)
-            console.log(userEmail)
-        
-        
+            await knex('healthprofessional')
+            .where('id','=' , id )
+            .update({password: password})
             
-
             return res.send()
 
             
@@ -93,11 +99,10 @@ module.exports = {
     async delete(req, res, next){
         try{
             const { idUsuario } = req.params
-            console.log(idUsuario)
+            console.log('Aqui',idUsuario)
 
             await knex('healthprofessional')
             .where('id', idUsuario).del()
-            
             
 
             return res.send()

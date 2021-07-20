@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Redirect } from 'react-router-dom';
 import { RegisterContext } from '../context/RegisterContext'
 import styles from '../styles/Register1Component.module.css'
+import validator from 'validator';
 
 const { isEmpty } = require('lodash');
 

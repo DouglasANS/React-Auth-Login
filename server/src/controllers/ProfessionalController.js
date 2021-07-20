@@ -8,6 +8,17 @@ module.exports = {
         return res.json(results)
         
     },
+    async currentUser(req, res) { 
+
+        const {Email} = req.body
+
+        console.log('aqui: ', Email)
+
+        const results = await knex.select('*').from('healthprofessional').where('email', Email)
+        
+        return res.json(results)
+        
+    },
     async create(req, res, next){
         try {
 

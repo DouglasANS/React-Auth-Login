@@ -12,10 +12,10 @@ export default function AuthProvider({ children }){
     function currentUserData(){    
         const token = window.localStorage.getItem('token')
         Axios.get (`http://localhost:3002/api/SelectUserLogin/${token}`).then((response) => {
-        console.log('currentUser: ', response.data[0])
+        console.log('currentUserContext: ', response.data[0])
         setCurrentUser(response.data[0].username)
         setCurrentEmail(response.data[0].email)
-        })
+        })  
     }
 
    

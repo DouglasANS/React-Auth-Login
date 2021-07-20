@@ -3,6 +3,7 @@ import DashBoardComponent from '../components/DashboardComponent'
 import { Redirect  } from "react-router-dom";
 import Axios from 'axios';
 import HeaderComponent from '../components/HeaderComponent';
+import FooterComponent from '../components/FooterComponent';
 
 export default function DashBoard(){
 
@@ -37,6 +38,7 @@ export default function DashBoard(){
               <div>
                 <HeaderComponent />
                 <DashBoardComponent /> 
+                <FooterComponent />
               </div>
               
             ) : (

@@ -7,7 +7,7 @@ const { isEmpty } = require('lodash');
 
 export default function ForgotPassword2Component(){
     const [password1, setPassword1] = useState('')
-    const [senha2, setSenha2] = useState('')
+    const [password2, setPassword2] = useState('')
     const [codVerification, setcodVerification] = useState('')
     
     const [proximo, setproximo] = useState(false)
@@ -18,7 +18,8 @@ export default function ForgotPassword2Component(){
         Axios.put (`http://localhost:3002/api/Mudarsenha/${Email}/${codVerification}/${password1}`).then((response) => {
             console.log(response)
             if(response.data.message){
-               // alert('Codigo de verificação errado')
+               alert('Código de verificação errado')
+               window.localStorage.setItem('changeEmail', '')
                setproximo(true)
             }else{
                 setproximo(true)
@@ -33,9 +34,9 @@ export default function ForgotPassword2Component(){
 
 
     function Mudarsenha(){
-        if((isEmpty(password1)) || (isEmpty(senha2)) ){
+        if((isEmpty(password1)) || (isEmpty(password2)) ){
             alert('Um ou mais campos de senha estão vazio')
-        }else if(password1 !== senha2){
+        }else if(password1 !== password2){
             alert('Digitar senhas com os mesmos caracteres')
         }else if(isEmpty(codVerification)){
             alert('Código de varificação está vazio')
@@ -58,7 +59,7 @@ export default function ForgotPassword2Component(){
                 </div>
                 <div>
                     <label>Nova senha: </label>
-                    <input type="password" onChange={(e)=>{setSenha2(e.target.value)}}/>
+                    <input type="password" onChange={(e)=>{setPassword2(e.target.value)}}/>
                 </div>
 
             <div className={styles.Mudarsenha}>

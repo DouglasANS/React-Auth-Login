@@ -12,7 +12,7 @@ export default function HeaderComponent(){
             <div className={styles.container}>
                 <h1>Bem vindo: {currentUser}</h1>
                 <Link className={styles.linkk} to="/dashboard">Dashboard</Link>
-                <Link className={styles.linkk} to="/conf">Configuração</Link>
+                <Link className={styles.linkk} to="/settings">Configuração</Link>
             </div>
         
         </>

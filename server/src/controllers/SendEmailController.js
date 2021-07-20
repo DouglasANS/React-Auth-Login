@@ -57,12 +57,21 @@ module.exports = {
         const {codVerification} = req.params
         const {newPassword} = req.params
 
-       
-        const results = await knex('healthprofessional')
-        .where('email','=' , Email ).where('randomnumber','=' , codVerification )
-        .update({ password: newPassword })
+        var result = await knex('healthprofessional').where('email', Email).where('randomnumber','=' , codVerification )
+        console.log(result)
         
-        return res.json(results)
+        if(result == ""){
+            return res.send({message: 'user not found'})
+        }else{
+            const results = await knex('healthprofessional')
+            .where('email','=' , Email ).where('randomnumber','=' , codVerification )
+            .update({ password: newPassword })
+            
+            return res.json(results)
+           
+        }
+
+          
     } catch (error) {
         next(error)
     }

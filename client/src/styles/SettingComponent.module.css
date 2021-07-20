@@ -1,0 +1,11 @@
+.container{ 
+    display: flex;
+}
+.fundoimg{
+    width: 50%;
+    background: url(../assets/settings.png);
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -14,5 +14,11 @@ export function saveCurrentEmail(currentEmail){
     window.localStorage.setItem('currentEmail', currentEmail)
   }
 
+export function deleteAllStorage(){
+  localStorage.removeItem('token');
+  localStorage.removeItem('currentUser');
+  localStorage.removeItem('currentEmail');
+}
+
 
 

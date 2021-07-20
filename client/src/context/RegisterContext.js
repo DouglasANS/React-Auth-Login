@@ -18,7 +18,11 @@ export default function RegisterProvider({ children }){
     const [numcasa, setNumCasa] = useState('')
     const [profissao, setProfissao] = useState('medico')
     const [numregistro, setNumRegistro] = useState('')
+    const [especialidade, setEspecialidade] = useState('')
+    const [localidadedeatuacao, setLocalidadedeatuacao] = useState('')
+    const [deslocamentomax, setDeslocamentomax] = useState('')
 
+    
     function cadastrarProfissional(){
         Axios.post ('http://localhost:3002/api/insert',{
           userUsername: username,
@@ -35,6 +39,9 @@ export default function RegisterProvider({ children }){
           userNumCasa: numcasa,
           userProfissao: profissao,
           userNumRegistro: numregistro,
+          userEspecialidade: especialidade,
+          userLocalidadedeatuacao: localidadedeatuacao,
+          userDeslocamentomax: deslocamentomax
         })
       }
   
@@ -56,6 +63,9 @@ export default function RegisterProvider({ children }){
             numcasa,
             profissao,
             numregistro,
+            especialidade,
+            localidadedeatuacao,
+            deslocamentomax,
             setUsername,
             setDate,
             setEmail,
@@ -70,7 +80,10 @@ export default function RegisterProvider({ children }){
             setNumCasa,
             setProfissao,
             setNumRegistro,
-            cadastrarProfissional
+            cadastrarProfissional,
+            setEspecialidade,
+            setLocalidadedeatuacao,
+            setDeslocamentomax,
             }}>
             {children}
         </RegisterContext.Provider>

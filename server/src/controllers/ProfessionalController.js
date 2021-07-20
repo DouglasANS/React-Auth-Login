@@ -36,6 +36,9 @@ module.exports = {
             const { userNumCasa } = req.body
             const { userProfissao } = req.body
             const { userNumRegistro } = req.body
+            const { userEspecialidade } = req.body
+            const { userLocalidadedeatuacao } = req.body
+            const { userDeslocamentomax } = req.body
 
             console.log('name: ' + userUsername +' data : ' + userDate + ' sex : ' + userSexo + " med : " + userProfissao)
         
@@ -54,7 +57,10 @@ module.exports = {
                     bairro: userBairro, 
                     numcasa: userNumCasa, 
                     profissao: userProfissao, 
-                    numregistro: userNumRegistro, 
+                    numregistro: userNumRegistro,
+                    especialidade:userEspecialidade,
+                    localidadedeatuacao:userLocalidadedeatuacao,
+                    deslocamentomax: userDeslocamentomax,
                 }
                 )
 

@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import {  useEffect, useState } from 'react';
+import styles from '../styles/SettingComponent.module.css'
 
 export default function SettingsComponent(){
     const [dataCurrentUser, setDatacurrentUser] = useState([])
@@ -14,11 +15,24 @@ export default function SettingsComponent(){
      console.log('datasssa1: ', dataCurrentUser)
     return(
         <>
-            <div >
-                <h1>SettingsComponent {dataCurrentUser.id}</h1>
-                <button >teste</button>
+            <div className={styles.container}>
+                <div className={styles.fundoimg}>
+                    
+                </div>
+                <div >
+                    <h1>username: {dataCurrentUser.username}</h1>
+                    <h1>cpf: {dataCurrentUser.cpf}</h1>
+                    
+                    <input type="text" onChange={(e)=>{}}/>
+                    <h1>localidadedeatuacao: {dataCurrentUser.localidadedeatuacao}</h1>
+                    <input type="text" onChange={(e)=>{}}/>
+                    <h1>deslocamentomax:{dataCurrentUser.deslocamentomax}</h1>
+                    <input type="text" onChange={(e)=>{}}/>
+                    <h1>SettingsComponent: {dataCurrentUser.id}</h1>
+                    <input type="text" onChange={(e)=>{}}/>
+                    <button >teste</button>
+                </div>
             </div>
-        
         </>
     )
 }

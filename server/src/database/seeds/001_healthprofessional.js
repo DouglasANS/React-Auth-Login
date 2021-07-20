@@ -7,18 +7,21 @@ exports.seed = function(knex) {
       return knex('healthprofessional').insert([
         { username: 'douglas', 
           date: 19960119,
-          email: 'douglas@hotmail.com',
+          email: 'douglasans@hotmail.com',
           cpf: '123456789',
           telefone: '86750496',
           password: '123456',
           sexo: 'masculino',
-          cep: '53430221',
-          logradouro: 'manoel herculano',
+          cep: '53435330',
+          logradouro: 'manoel herculano pessoa',
           cidade: 'paulista',
           bairro: 'janga',
           numcasa: '625',
           profissao: 'medico',
-          numregistro: '53435',     
+          numregistro: '53435',
+          especialidade: 'Pediatria',
+          localidadedeatuacao: "Boa viagem",
+          deslocamentomax: "50"
         },
       ]);
     });

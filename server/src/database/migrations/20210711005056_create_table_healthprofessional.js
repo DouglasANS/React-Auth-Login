@@ -13,8 +13,13 @@ exports.up = knex =>  knex.schema.createTable('healthprofessional', table => {
     table.text('cidade').notNullable()
     table.text('bairro').notNullable()
     table.text('numcasa').notNullable()
-    table.enu('profissao', ['medico', 'enfermeiro','tecnicoEnfermagem', 'fonoaudiologia', '---']).notNullable()
+    table.enu('profissao', ['medico', 'enfermeiro','tecnicoEnfermagem', 'fonoaudiologia','nutricionista', 'fisioterapeuta']).notNullable()
     table.text('numregistro').notNullable()
+    table.text('especialidade')
+    table.text('localidadedeatuacao').notNullable()
+    table.text('deslocamentomax').notNullable()
+    table.text('randomnumber')
+   
     
 
 })

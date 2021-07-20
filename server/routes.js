@@ -7,7 +7,6 @@ const CountProfessionalController = require('./src/controllers/CountProfessional
 const SendEmailController = require('./src/controllers/SendEmailController')
 
 routes.get('/api/get', ProfessionalController.index)
-// talvez posso apagar routes.get('/api/currentUser/:currentEmail', ProfessionalController.currentUser)
 routes.post('/api/insert', ProfessionalController.create)
 routes.post('/api/login', ProfessionalController.checkLogin)
 routes.post('/api/checkEmail', ProfessionalController.checkEmail)

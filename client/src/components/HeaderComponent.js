@@ -1,18 +1,32 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from '../styles/HeaderComponent.module.css'
+import { deleteAllStorage } from '../Request/tokenService';
 
+import { Redirect } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 export default function HeaderComponent(){
+    const [valor, setvalor] = useState(false)
+    const { currentUser } = useContext(AuthContext)
+    
+    function sair(){
+        setvalor(true)
+        deleteAllStorage()
+    }
+
+    if (valor) {
+        return <Redirect to='/' />
+       }
     
 
-    const { currentUser } = useContext(AuthContext)
+    
     return(
         <>
             <div className={styles.container}>
                 <h1>Bem vindo: {currentUser}</h1>
                 <Link className={styles.linkk} to="/dashboard">Dashboard</Link>
                 <Link className={styles.linkk} to="/settings">Configuração</Link>
+                <a><button onClick={sair}>Sair</button></a>
             </div>
         
         </>

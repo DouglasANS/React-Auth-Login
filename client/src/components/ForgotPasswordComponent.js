@@ -2,20 +2,20 @@ import  styles  from '../styles/Register1Component.module.css'
 import Axios from 'axios';
 import { useState } from 'react'
 import { Redirect } from 'react-router-dom'
-const { isEmpty } = require('lodash');
+import { changeEmail } from '../Request/tokenService';
 
 export default function ForgotPasswordComponent(){
-    const [changeEmail, setChangeEmail] = useState('')
+    const [changeEmailData, setChangeEmail] = useState('')
     const [proximo, setproximo] = useState(false)
 
     function sendEmailto(){
         const randomNumber = Math.floor(Math.random() * 100000 + 1)
-        Axios.post (`http://localhost:3002/api/sendEmailto/${changeEmail}/${randomNumber}`).then((response) => {
+        Axios.post (`http://localhost:3002/api/sendEmailto/${changeEmailData}/${randomNumber}`).then((response) => {
             console.log(response)
             if(response.data.message){
                 alert('Email Inexistente')
             }else{          
-                window.localStorage.setItem('changeEmail', changeEmail)
+                changeEmail(changeEmailData)
                 setproximo(true)
             }
         })

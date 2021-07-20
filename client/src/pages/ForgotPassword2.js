@@ -1,14 +1,21 @@
-
 import FooterComponent from '../components/FooterComponent';
 import ForgotPassword2Component from '../components/ForgotPassword2Component';
+import { Redirect } from 'react-router-dom'
 
 export default function ForgotPassword() {
-  
+  const token = window.localStorage.getItem('token')
   return (
-    <div>
-      <ForgotPassword2Component />
-        <FooterComponent />
+    <div>   
+    { token ? 
+        (
+          <Redirect to='/dashboard' />
+        ) : (
+        <>
+          <ForgotPassword2Component />
+          <FooterComponent />
+        </>
+        
+        )}
     </div>
-   
   )
 }

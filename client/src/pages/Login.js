@@ -1,18 +1,15 @@
-import { useContext } from 'react'
 import LoginComponent from '../components/LoginComponent';
 import FooterComponent from '../components/FooterComponent';
-import { AuthContext } from '../context/AuthContext';
-import Pagina2 from './page2';
+import { Redirect } from 'react-router-dom'
 
 export default function Login() {
-  const auth = useContext(AuthContext)
-  
+  const token = window.localStorage.getItem('token')
   return (
     <div>
       
-       { auth.Login ? 
+       { token ? 
             (
-              <Pagina2  />
+              <Redirect to='/dashboard' />
             ) : (
               <>
                 <LoginComponent />

@@ -2,6 +2,7 @@ import Axios from 'axios';
 import {  useEffect, useState } from 'react';
 import styles from '../styles/SettingComponent.module.css'
 import { Redirect } from 'react-router-dom';
+import { deleteAllStorage } from '../Request/tokenService';
 
 const { isEmpty } = require('lodash');
 export default function SettingsComponent(){
@@ -25,6 +26,7 @@ export default function SettingsComponent(){
     function updateSettings(){
         Axios.put(`http://localhost:3002/api/update/${id}/${localidadedeatuacao}/${deslocamentomax}/${password}`).then((response) => {
         })
+        window.location.reload();
     }
 
     function deleteAccount(){
@@ -32,6 +34,7 @@ export default function SettingsComponent(){
         if(deletarAccount){
             console.log('deletou a conta')
             setvalor(true)
+            deleteAllStorage()
             Axios.delete(`http://localhost:3002/api/delete/${id}`).then((response) => {})
         }
     }

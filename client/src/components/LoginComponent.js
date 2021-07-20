@@ -25,7 +25,7 @@ export default function LoginComponent() {
           //Usuário encontrado 
           //auth.setLogin(true)
           saveCurrentEmail(email)
-          saveToken(email)
+          saveToken(true)
           setvalor(true)
         }
     })

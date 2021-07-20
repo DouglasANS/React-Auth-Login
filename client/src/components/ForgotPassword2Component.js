@@ -1,7 +1,7 @@
 import  styles  from '../styles/Register1Component.module.css'
 import Axios from 'axios';
 import { useState } from 'react'
-
+import { deleteAllStorage } from '../Request/tokenService';
 import { Redirect } from 'react-router-dom'
 const { isEmpty } = require('lodash');
 
@@ -21,8 +21,10 @@ export default function ForgotPassword2Component(){
                alert('Código de verificação errado')
                window.localStorage.setItem('changeEmail', '')
                setproximo(true)
+               deleteAllStorage()
             }else{
                 setproximo(true)
+                deleteAllStorage()
             }
         })
     }

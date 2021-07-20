@@ -1,4 +1,5 @@
 const knex = require('../database')  
+const nodemailer = require('nodemailer')
 
 module.exports = {
     async index(req, res) { 
@@ -61,9 +62,7 @@ module.exports = {
             console.log(userid)
             console.log(userEmail)
         
-            await knex('users')
-            .where('id','=' , userid )
-            .update({ email:userEmail })
+        
             
 
             return res.send()
@@ -141,5 +140,6 @@ module.exports = {
         return res.json(results)
         
     },
-    //SELECT count(*) FROM produtos      
+ 
+
 }

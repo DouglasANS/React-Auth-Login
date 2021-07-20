@@ -3,8 +3,8 @@ const express = require('express')
 const routes = express.Router() 
 
 const ProfessionalController = require('./src/controllers/ProfessionalController')
-
 const CountProfessionalController = require('./src/controllers/CountProfessionalController')
+const SendEmailController = require('./src/controllers/SendEmailController')
 
 routes.get('/api/get', ProfessionalController.index)
 routes.post('/api/insert', ProfessionalController.create)
@@ -20,6 +20,10 @@ routes.get('/api/countTecnicoEnfermagem', CountProfessionalController.countTecni
 routes.get('/api/countFonoaudiologia', CountProfessionalController.countFonoaudiologia)
 
 routes.post('/api/imagema', CountProfessionalController.imagema)
+
+
+
+routes.post('/api/sendEmailto/:changeEmail/:randomNumber', SendEmailController.sendEmailto)
 
 
 

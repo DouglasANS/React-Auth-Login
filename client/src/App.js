@@ -9,6 +9,7 @@ import Register1 from './pages/Register1';
 import Register2 from './pages/Register2';
 import Register3 from './pages/Register3';
 import ForgotPassword from './pages/ForgotPassword'
+import ForgotPassword2 from './pages/ForgotPassword2'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path='/pag2' component={Pagina2}/>
             <Route path='/dashboard' component={DashBoard}/>
             <Route path='/ForgotPassword' component={ForgotPassword}/>
+            <Route path='/ForgotPassword2' component={ForgotPassword2}/>
           </Switch>
         </RegisterProvider>
       </AuthProvider>

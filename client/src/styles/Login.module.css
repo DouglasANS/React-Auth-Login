@@ -32,11 +32,13 @@
 }
 
 .image{
-    background: url(../assets/imgcuidadosalvus.png);
-    background-position: center;
-    background-size: cover;
-    height: 757px;
     width: 50%;
+}
+
+.teste{
+    height: 700px;
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -59,6 +61,7 @@
     width: 250px;
     border: 2px;
     background-color: rgb(168, 212, 150);
+    box-shadow: 0px 5px 7px #04460a81;
 }
 
 .login button:hover {
@@ -70,6 +73,7 @@
     color: rgb(46, 88, 35);
     font-size: 16px;
     font-weight:normal; 
+   
 }
 .login h1{
     color: rgb(36, 75, 26);
@@ -78,6 +82,18 @@
 .login h2{
     color: rgb(64, 146, 44);
 }
+
+.loginbutton{
+    margin-bottom: 20px;
+}
+
+.text{
+    margin-left: 60px;
+    margin-right: 60px;
+    border-left: solid rgba(73, 72, 72, 0.747) 1px;
+    border-right: solid rgba(73, 72, 72, 0.747) 1px;
+}
+
 
 
 /*

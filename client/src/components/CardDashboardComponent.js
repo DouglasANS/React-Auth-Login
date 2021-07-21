@@ -1,122 +1,120 @@
 import styles from '../styles/CardDashboardComponent.module.css'
 
-const asd= require('../')
+const asd = require('../')
 
-export default function CardDashboardComponent(props){
-  
-    return(  
-        <div className={styles.container}>
-        <div className={styles.five}>
-            <h1>{props.title}</h1>
-            <h1>{props.number}</h1>
-        </div>
-        <div className={styles.five}>
-            <img src="/todos.png" /> 
-        </div>
-        
-       
-    </div>
-    )
-}
+export default function CardDashboardComponent(props) {
 
-export function Card2(props){
-  
-    return(  
+    return (
         <div className={styles.container}>
-            <div className={styles.five}>
+            <div className={styles.dados}>
                 <h1>{props.title}</h1>
-                <h1>{props.number}</h1>
+                <h2>{props.number}</h2>
             </div>
-            <div className={styles.five}>
-                <img src="/medicoicon.png" /> 
+            <div>
+                <img src="/todos.png" />
             </div>
-            
-           
         </div>
     )
 }
 
-export function Card3(props){
-  
-    return(  
+export function Card2(props) {
+
+    return (
         <div className={styles.container}>
-            <div className={styles.five}>
+            <div className={styles.dados}>
                 <h1>{props.title}</h1>
-                <h1>{props.number}</h1>
+                <h2>{props.number}</h2>
             </div>
-            <div className={styles.five}>
-                <img src="/enfermeiroicon.png" /> 
+            <div>
+                <img src="/medicoicon.png" />
             </div>
-            
-           
+
+
         </div>
     )
 }
 
-export function Card4(props){
-  
-    return(  
+export function Card3(props) {
+
+    return (
         <div className={styles.container}>
-            <div className={styles.five}>
+            <div className={styles.dados}>
                 <h1>{props.title}</h1>
-                <h1>{props.number}</h1>
+                <h2>{props.number}</h2>
             </div>
-            <div className={styles.five}>
-                <img src="/tecenfermagemicon.png" /> 
+            <div>
+                <img src="/enfermeiroicon.png" />
             </div>
-            
-           
+
+
         </div>
     )
 }
 
-export function Card5(props){
-  
-    return(  
+export function Card4(props) {
+
+    return (
         <div className={styles.container}>
-            <div className={styles.five}>
+            <div className={styles.dados}>
                 <h1>{props.title}</h1>
-                <h1>{props.number}</h1>
+                <h2>{props.number}</h2>
             </div>
-            <div className={styles.five}>
-                <img src="/fonoicon.png" /> 
+            <div>
+                <img src="/tecenfermagemicon.png" />
             </div>
-            
-           
+
+
         </div>
     )
 }
 
-export function Card6(props){
-  
-    return(  
+export function Card5(props) {
+
+    return (
         <div className={styles.container}>
-            <div className={styles.five}>
+            <div className={styles.dados}>
                 <h1>{props.title}</h1>
-                <h1>{props.number}</h1>
+                <h2>{props.number}</h2>
             </div>
-            <div className={styles.five}>
-                <img src="/nutricionistaicon.png" /> 
+            <div>
+                <img src="/fonoicon.png" />
             </div>
-            
-           
+
+
         </div>
     )
 }
 
-export function Card7(props){
-  
-    return(  
+export function Card6(props) {
+
+    return (
         <div className={styles.container}>
-            <div className={styles.five}>
+            <div className={styles.dados}>
                 <h1>{props.title}</h1>
-                <h1>{props.number}</h1>
+                <h2>{props.number}</h2>
             </div>
-            <div className={styles.five}>
-                <img src="/fisioterapiaicon.png" /> 
+            <div>
+                <img src="/nutricionistaicon.png" />
             </div>
-            
-           
+
+
+        </div>
+    )
+}
+
+export function Card7(props) {
+
+    return (
+        <div className={styles.container}>
+            <div className={styles.dados}>
+                <h1>{props.title}</h1>
+                <h2>{props.number}</h2>
+            </div>
+            <div>
+                <img src="/fisioterapiaicon.png" />
+            </div>
+
+
         </div>
     )
 }

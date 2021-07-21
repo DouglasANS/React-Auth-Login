@@ -12,18 +12,27 @@
     margin-top: 30px;
     margin-bottom: 30px;
     border-radius: 16px;
-    
 }
-.container h1{
-    margin: none;
+
+.dados{
+    margin-top: 15px;
+    width: 50%;
     height: 50%;
 }
 
+.dados h1{
+    margin-bottom: 20px;
+    height: 50%;
+    font-size: 25px;
+}
+.dados h2{
+    font-size: 50px;
+}
 .container img{
     box-sizing: border-box;
     height: 100%;
 }
 
-.five{
+.dados{
     width: 50%;
 }

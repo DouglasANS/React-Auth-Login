@@ -7,31 +7,57 @@
     
 }
 
+.logo{
+    width: 15%;
+    height: 100%;
+    background: url(../assets/logosalvus.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .container h1{
     margin: 0;
+    font-size: 25px;
 }
 
 .linkk {
     margin-left: 10px;
+    font-weight:bold;
     text-decoration: none;
+    color: rgb(39, 92, 48);
 }
-.element{
-    width: 33%;
-    
+.element1{
+    width: 40%;
     text-align: center;
 }
 
-.container button{
-    color: cornsilk;
-    background-color: rgb(95, 95, 95);
+.element{
     
+    width: 20%;
+    text-align: center;
+}
+.sair {
+    width: 25%;
+    text-align: right;
+    margin-right: 20px;
+}
+.sair button{
+    color: cornsilk;
+    background-color: rgb(95, 95, 95); 
+    box-shadow: 0px 5px 7px #1b241c81;
     border: none;
-    box-shadow: 2px 2px;
     border-radius: 16px;
     height: 30px;
     width: 120px;
     cursor: pointer;
 }
+.sair button:hover{
+    background-color: rgb(58, 58, 58);
+    
+}
+
+
 /*
 display: flex;
 flex-direction: column;

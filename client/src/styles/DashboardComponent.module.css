@@ -1,7 +1,8 @@
 .container{
     display: flex;
     justify-content: center;
-    background-color: rgb(217, 235, 220);
-    height: 300px;
+    background-color: rgb(225, 255, 230);
+    height: 200px;
+    
 }
 

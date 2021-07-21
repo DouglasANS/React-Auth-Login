@@ -7,3 +7,13 @@
     font-size: 16px;
     font-weight:normal;
 }
+
+.tamanho{
+    width: 20%;
+}
+
+.logosalvus{
+    width: 20%;
+    background: url(../assets/simbolo.png);
+    background-size: cover;
+}

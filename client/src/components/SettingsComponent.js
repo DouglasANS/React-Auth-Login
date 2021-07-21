@@ -50,22 +50,28 @@ export default function SettingsComponent(){
                 <div className={styles.fundoimg}>
                     
                 </div>
-                <div >
-                    <h1>username: {dataCurrentUser.username}</h1>
-                    <h1>cpf: {dataCurrentUser.cpf}</h1>
+                <div className={styles.upload}>
+                    <div className={styles.formulario}>
+                        <h2>Localidade de atuação: {dataCurrentUser.localidadedeatuacao}</h2>
+                        <input type="text" onChange={(e)=>{setLocalidadedeatuacao(e.target.value)}}/>
+                        <h2>deslocamento máximo: {dataCurrentUser.deslocamentomax}</h2>
+                        <input type="text" onChange={(e)=>{setDeslocamentomax(e.target.value)}}/>
+                        <h2>Password: {dataCurrentUser.password}</h2>
+                        <input type="text" onChange={(e)=>{setPassword(e.target.value)}}/>
+                        <button className={styles.salvar} onClick={updateSettings}>Salvar</button>
+                    </div>
+                    <div>
+                        <h1>username: {dataCurrentUser.username}</h1>
+                        <h1>cpf: {dataCurrentUser.cpf}</h1> 
+                  
+                        <div>
+                       
+                        </div>
+                        <div>
+                            <button className={styles.deletar} onClick={deleteAccount}>Deletar Account</button>
+                        </div>
+                    </div>
                     
-                    <h1>Localidade de atuação: {dataCurrentUser.localidadedeatuacao}</h1>
-                    <input type="text" onChange={(e)=>{setLocalidadedeatuacao(e.target.value)}}/>
-                    <h1>deslocamento máximo: {dataCurrentUser.deslocamentomax}</h1>
-                    <input type="text" onChange={(e)=>{setDeslocamentomax(e.target.value)}}/>
-                    <h1>Password: {dataCurrentUser.password}</h1>
-                    <input type="text" onChange={(e)=>{setPassword(e.target.value)}}/>
-                    <div>
-                    <button onClick={updateSettings}>Salvar</button>
-                    </div>
-                    <div>
-                    <button onClick={deleteAccount}>Deletar Account</button>
-                    </div>
                 </div>
              
             </div>

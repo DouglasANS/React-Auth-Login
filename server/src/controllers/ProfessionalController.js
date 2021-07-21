@@ -1,5 +1,7 @@
-const knex = require('../database')  
-const nodemailer = require('nodemailer')
+const knex = require('../database') 
+
+const multer = require('multer')
+const upload = multer({dest: 'uploads/'}) 
 
 module.exports = {
     async index(req, res) { 
@@ -161,6 +163,22 @@ module.exports = {
         
         return res.json(results)
         
+    },
+    async saveUpload(req, res, next) { 
+        try{
+        
+        const {file} = req.file
+
+         console.log('Recebi a imagem asd: ',  file , 'ate aqui')
+
+        //results = await upload.single('file')
+
+        //console.log('Recebi a imagem', upload.single('file') , 'ate aqui')
+        
+        return res.status('ima: ').json(results)
+    } catch (error) {
+        next(error)
+    } 
     },
  
 

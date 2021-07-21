@@ -1,10 +1,24 @@
 const express = require('express')
- 
+const multer = require('multer')
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'uploads/')
+      },
+      filename: function (req, file, cb) {
+        cb(null, file.originalname)
+      }
+})
+
+const upload = multer({storage})
 const routes = express.Router() 
+
+
 
 const ProfessionalController = require('./src/controllers/ProfessionalController')
 const CountProfessionalController = require('./src/controllers/CountProfessionalController')
 const SendEmailController = require('./src/controllers/SendEmailController')
+
 
 routes.get('/api/get', ProfessionalController.index)
 routes.post('/api/insert', ProfessionalController.create)
@@ -19,18 +33,13 @@ routes.get('/api/countMedico', CountProfessionalController.countMedico)
 routes.get('/api/countEnfermeiro', CountProfessionalController.countEnfermeiro)
 routes.get('/api/countTecnicoEnfermagem', CountProfessionalController.countTecnicoEnfermagem)
 routes.get('/api/countFonoaudiologia', CountProfessionalController.countFonoaudiologia)
+routes.get('/api/countNutricionista', CountProfessionalController.countNutricionista)
+routes.get('/api/countFisioterapeuta', CountProfessionalController.countFisioterapeuta)
 
 //routes.post('/api/imagema', CountProfessionalController.imagema)
 
-
-
 routes.post('/api/sendEmailto/:changeEmail/:randomNumber', SendEmailController.sendEmailto)
 routes.put('/api/Mudarsenha/:Email/:codVerification/:newPassword', SendEmailController.ChangePassword)
-
-
-
-
-
 
 
 

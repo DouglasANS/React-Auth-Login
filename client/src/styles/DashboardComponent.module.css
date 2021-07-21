@@ -1,4 +1,7 @@
 .container{
     display: flex;
-    background-color: rgb(134, 218, 145);
+    justify-content: center;
+    background-color: rgb(217, 235, 220);
+    height: 300px;
 }
+

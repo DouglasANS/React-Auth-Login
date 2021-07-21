@@ -1,5 +1,6 @@
 .container{ 
     display: flex;
+   
 }
 .fundoimg{
     width: 50%;
@@ -8,4 +9,53 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.upload{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(224, 255, 228);
+}
+.upload h2{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.upload input{
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    height: 20px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 247, 247);
+}
+
+.formulario{
+    display: flex;
+    background-color: rgb(128, 255, 170);
+    flex-direction: column;
+
+    width: 50%;
+    border-radius: 16px;
+}
+
+.deletar{
+    background-color: brown;
+}
+
+.salvar{
+    background-color: rgb(42, 165, 69);
+}
+
+.salvar, .deletar{
+    
+    border: none;
+    box-shadow: 2px 2px;
+    border-radius: 16px;
+    margin-top: 20px;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
 }

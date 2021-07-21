@@ -3,7 +3,9 @@ const knex = require('../database')
 module.exports = {
     async allGet(req, res) { 
 
-        const results = await knex.select('*').from('healthprofessional')
+        const results = await knex('healthprofessional')
+        .count('profissao' , {as: 'a'})
+
         return res.json(results)
         
     },
@@ -40,22 +42,22 @@ module.exports = {
 
         return res.json(results)
     },
+    async countNutricionista(req, res) { 
 
-    async imagema(req, res) { 
-        try {
+        const results = await knex('healthprofessional')
+        .count('profissao' , {as: 'a'})
+        .where('profissao', 'nutricionista')
 
-        const { Imga } = req.body
-        console.log('asd',Imga)
-        await knex('admuser').insert(
-            {   
-                user: Imga, 
-            }
-            )
+        return res.json(results)
+    },
+    async countFisioterapeuta(req, res) { 
 
-        return console.log("done")//res.status(200).send()
-    } catch (error) {
-        next(error)
-    }    
-},
+        const results = await knex('healthprofessional')
+        .count('profissao' , {as: 'a'})
+        .where('profissao', 'fisioterapeuta')
+
+        return res.json(results)
+    },
+
     //SELECT count(*) FROM produtos      
 }

@@ -1,12 +1,26 @@
+import FooterComponent from "../components/FooterComponent";
+import HeaderComponent from "../components/HeaderComponent";
+import UploadComponent from "../components/uploadComponent";
+import { Redirect } from 'react-router-dom'
+
 export default function Upload() {
 
+    const token = window.localStorage.getItem('token')
+
     return (
-        <div>
-            <h1>Form de upload</h1>
-            <form method='post' encType='multipart/form-data' action='http://localhost:3002/upload'>
-                <input type='file' name='file' />
-                <input type='submit' value='upload' />
-            </form>
-        </div>
+       
+         <div>
+         {token ?
+             (
+             <>
+                <HeaderComponent />
+                <UploadComponent />
+                <FooterComponent />
+             </>
+             ) :
+             (
+                 <Redirect to='/' />
+             )}
+     </div>
     )
 }

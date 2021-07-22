@@ -46,7 +46,7 @@ select {
 	width: 80%;
 	margin-left: 30px;
 	margin-right: 30px;
-	border-radius: 30px;
+	border-radius: 15px;
 	background: url(../assets/logosalvus.png);
 	background-size: cover;
 	background-position: center;

@@ -10,7 +10,7 @@ export default function Register1() {
         <div>
             {token ?
                 (
-                    <Redirect to='/dashboard' />
+                    <Redirect to='/home' />
                 ) :
                 (
                     <>

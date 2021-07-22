@@ -10,7 +10,7 @@ export default function ForgotPassword() {
     <div>
       {token ?
         (
-          <Redirect to='/dashboard' />
+          <Redirect to='/home' />
         ) :
         (
           <>

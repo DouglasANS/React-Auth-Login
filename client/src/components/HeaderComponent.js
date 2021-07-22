@@ -27,8 +27,10 @@ export default function HeaderComponent() {
                 <h1>Bem Vindo: {currentUser}</h1>
             </div>
             <div className={styles.element}>
+                <Link className={styles.linkk} to="/Home">Home</Link>
                 <Link className={styles.linkk} to="/dashboard">Dashboard</Link>
                 <Link className={styles.linkk} to="/settings">Configuração</Link>
+                <Link className={styles.linkk} to="/upload">Upload</Link>
             </div>
             <div className={styles.sair}>
                 <a><button onClick={sair}>Sair</button></a>

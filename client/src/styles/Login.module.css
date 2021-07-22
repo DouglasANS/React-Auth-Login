@@ -1,6 +1,7 @@
 .container {
 	display: flex;
 	background-color: rgb(255, 255, 255);
+	
 }
 
 .login input {
@@ -32,11 +33,6 @@
 	width: 50%;
 }
 
-.teste {
-	height: 700px;
-	background-size: cover;
-	background-position: center;
-}
 
 .login {
 	display: flex;
@@ -44,7 +40,7 @@
 	text-align: center;
 	justify-content: center;
 	flex: 1;
-	height: 750px;
+	height: 80vh;
 	width: 400px;
 }
 

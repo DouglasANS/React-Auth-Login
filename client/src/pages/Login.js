@@ -10,7 +10,7 @@ export default function Login() {
     <div>
       {token ?
         (
-          <Redirect to='/dashboard' />
+          <Redirect to='/home' />
         ) :
         (
           <>

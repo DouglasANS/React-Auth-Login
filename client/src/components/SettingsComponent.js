@@ -1,10 +1,10 @@
 import Axios from 'axios';
-import {  useEffect, useState } from 'react';
+import {  useContext, useEffect, useState } from 'react';
 import styles from '../styles/SettingComponent.module.css'
 import { Redirect } from 'react-router-dom';
 import { deleteAllStorage } from '../Request/tokenService';
+import { AuthContext } from '../context/AuthContext';
 
-const { isEmpty } = require('lodash');
 export default function SettingsComponent(){
     const [valor, setvalor] = useState(false)
     const [dataCurrentUser, setDatacurrentUser] = useState([])
@@ -13,6 +13,8 @@ export default function SettingsComponent(){
     const [password, setPassword] = useState('')
     const id = dataCurrentUser.id
 
+    const { currentUserData } = useContext(AuthContext)
+
     useEffect(()=>{
         const token = window.localStorage.getItem('currentEmail')
         Axios.get (`http://localhost:3002/api/SelectUserLogin/${token}`).then((response) => {
@@ -20,6 +22,7 @@ export default function SettingsComponent(){
         setLocalidadedeatuacao(response.data[0].localidadedeatuacao)
         setDeslocamentomax(response.data[0].deslocamentomax)
         setPassword(response.data[0].password)
+        currentUserData()
         })  
      },[])
 

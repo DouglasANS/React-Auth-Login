@@ -1,63 +1,60 @@
-const knex = require('../database')  
+const knex = require('../database')
 
 module.exports = {
-    async allGet(req, res) { 
+    async allGet(req, res) {
 
         const results = await knex('healthprofessional')
-        .count('profissao' , {as: 'a'})
+            .count('profissao', { as: 'a' })
 
         return res.json(results)
-        
+
     },
-    async countMedico(req, res) { 
+    async countMedico(req, res) {
 
         const results = await knex('healthprofessional')
-        .count('profissao' , {as: 'a'})
-        .where('profissao', 'medico')
-        
-        return res.json(results)
-    },
-    async countEnfermeiro(req, res) { 
-    
-        const results = await knex('healthprofessional')
-        .count('profissao' , {as: 'a'})
-        .where('profissao', 'enfermeiro')
+            .count('profissao', { as: 'a' })
+            .where('profissao', 'medico')
 
         return res.json(results)
     },
-    async countTecnicoEnfermagem(req, res) { 
+    async countEnfermeiro(req, res) {
 
-        
         const results = await knex('healthprofessional')
-        .count('profissao' , {as: 'a'})
-        .where('profissao', 'tecnicoEnfermagem')
+            .count('profissao', { as: 'a' })
+            .where('profissao', 'enfermeiro')
 
         return res.json(results)
     },
-    async countFonoaudiologia(req, res) { 
+    async countTecnicoEnfermagem(req, res) {
 
         const results = await knex('healthprofessional')
-        .count('profissao' , {as: 'a'})
-        .where('profissao', 'fonoaudiologia')
+            .count('profissao', { as: 'a' })
+            .where('profissao', 'tecnicoEnfermagem')
 
         return res.json(results)
     },
-    async countNutricionista(req, res) { 
+    async countFonoaudiologia(req, res) {
 
         const results = await knex('healthprofessional')
-        .count('profissao' , {as: 'a'})
-        .where('profissao', 'nutricionista')
+            .count('profissao', { as: 'a' })
+            .where('profissao', 'fonoaudiologia')
 
         return res.json(results)
     },
-    async countFisioterapeuta(req, res) { 
+    async countNutricionista(req, res) {
 
         const results = await knex('healthprofessional')
-        .count('profissao' , {as: 'a'})
-        .where('profissao', 'fisioterapeuta')
+            .count('profissao', { as: 'a' })
+            .where('profissao', 'nutricionista')
 
         return res.json(results)
     },
+    async countFisioterapeuta(req, res) {
 
-    //SELECT count(*) FROM produtos      
+        const results = await knex('healthprofessional')
+            .count('profissao', { as: 'a' })
+            .where('profissao', 'fisioterapeuta')
+
+        return res.json(results)
+    },  
 }

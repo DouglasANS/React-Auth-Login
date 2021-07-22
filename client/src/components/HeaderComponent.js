@@ -36,11 +36,6 @@ export default function HeaderComponent() {
             <div className={styles.sair}>
                 <a><button onClick={sair}>Sair</button></a>
             </div>
-
-
         </div>
-
-
-
     )
 }

@@ -27,7 +27,7 @@ export default function HeaderComponent() {
 
             </div>
             <div className={styles.element1}>
-                <h1>Bem vindo: {currentUser}</h1>
+                <h1>Bem Vindo: {currentUser}</h1>
             </div>
             <div className={styles.element}>
                 <Link className={styles.linkk} to="/dashboard">Dashboard</Link>

@@ -32,7 +32,7 @@ export default function DashBoardComponent() {
             <div className={styles.container}>
                 <Card2 title="Medicina" number={medico} />
                 <Card3 title="Enfermagem" number={enfermeiro} />
-                <Card4 title="Técnico em enfermagem" number={tecnicoEnfermagem} />
+                <Card4 title="Técnico em Enfermagem" number={tecnicoEnfermagem} />
             </div>
             <div className={styles.container}>
                 <Card5 title="Fonoaudiologia" number={fonoaudiologia} />

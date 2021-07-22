@@ -52,11 +52,11 @@ export default function SettingsComponent(){
                 </div>
                 <div className={styles.upload}>
                     <div className={styles.formulario}>
-                        <h2>Localidade de atuação: {dataCurrentUser.localidadedeatuacao}</h2>
+                        <h2>Localidade de Atuação: {dataCurrentUser.localidadedeatuacao}</h2>
                         <input type="text" onChange={(e)=>{setLocalidadedeatuacao(e.target.value)}}/>
-                        <h2>deslocamento máximo: {dataCurrentUser.deslocamentomax}</h2>
+                        <h2>Deslocamento Máximo: {dataCurrentUser.deslocamentomax}</h2>
                         <input type="text" onChange={(e)=>{setDeslocamentomax(e.target.value)}}/>
-                        <h2>Password: {dataCurrentUser.password}</h2>
+                        <h2>Senha: {dataCurrentUser.password}</h2>
                         <input type="text" onChange={(e)=>{setPassword(e.target.value)}}/>
                         <button className={styles.salvar} onClick={updateSettings}>Salvar</button>
                     </div>

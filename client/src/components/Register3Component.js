@@ -56,7 +56,7 @@ export default function Register3Component(){
                 </select>
             </div>
             <div>
-                <label>Numero de Registro: </label>
+                <label>Número de Registro: </label>
                 <input type="text" onChange={(e)=>{setNumRegistro(e.target.value)}}/>
             </div>
             <div>
@@ -64,7 +64,7 @@ export default function Register3Component(){
                 <input type="text" onChange={(e)=>{setEspecialidade(e.target.value)}}/>
             </div>
             <div>
-                <label>Localidade de Atuacao: </label>
+                <label>Localidade de Atuação: </label>
                 <input type="text" onChange={(e)=>{setLocalidadedeatuacao(e.target.value)}}/>
             </div>
             <div>

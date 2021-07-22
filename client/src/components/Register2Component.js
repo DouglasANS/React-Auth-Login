@@ -62,7 +62,7 @@ export default function Register2Component(){
     return(
         <div className={styles.container}>
             <div className={styles.caixa}>
-                <label>Cep: </label> 
+                <label>CEP: </label> 
                 <input type="text" onChange={(e)=>{setCep(e.target.value)}}/>
                 <button onClick={RequestCepV}>Consultar CEP</button>
             
@@ -75,7 +75,7 @@ export default function Register2Component(){
                 <label>Bairro: </label>
                 <input type="text" name="bairro"  onChange={(e)=>{setBairro(e.target.value)}}/>
             
-                <label>Número Casa: </label>
+                <label>Número Residencial: </label>
                 <input type="text" onChange={(e)=>{setNumCasa(e.target.value)}}/>
 
                 <div className={styles.buttonProximo}>

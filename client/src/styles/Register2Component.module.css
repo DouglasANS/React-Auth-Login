@@ -1,7 +1,7 @@
 .container {
 	background: url(../assets/blur1.png);
 	display: flex;
-	height: 756px;
+	height: 81vh;
 	justify-content: center;
 	background-position: center;
 	background-size: cover;

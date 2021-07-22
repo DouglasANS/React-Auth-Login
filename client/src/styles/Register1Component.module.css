@@ -1,7 +1,7 @@
 .container {
 	background: url(../assets/blur1.png);
 	display: flex;
-	height: 800px;
+	height: 81vh;
 	justify-content: center;
 	background-position: center;
 	background-size: cover;
@@ -27,7 +27,7 @@ select {
 	border-radius: 10px;
 	border: none;
 	outline: none;
-	height: 30px;
+	height: 20px;
 	margin-left: 30px;
 	margin-right: 50px;
 }
@@ -35,7 +35,7 @@ select {
 .caixa label {
 	flex-direction: column;
 	align-items: center;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-left: 30px;
 }
 

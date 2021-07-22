@@ -1,7 +1,7 @@
 .container {
 	background: url(../assets/blur1.png);
 	display: flex;
-	height: 756px;
+	height: 81vh;
 	justify-content: center;
 	background-position: center;
 	background-size: cover;
@@ -14,7 +14,6 @@
 	flex-direction: column;
 	align-items: left;
 	justify-content: center;
-	;
 	background: rgb(2, 0, 36);
 	background: linear-gradient(176deg, rgba(2, 0, 36, 1) 0%, rgba(66, 200, 56, 0.8295693277310925) 0%, rgba(0, 255, 196, 0.8435749299719888) 100%);
 	width: 400px;

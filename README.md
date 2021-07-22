@@ -16,3 +16,7 @@ O projeto possui... ->
 7- Ao logar a primeira página é o Dashboard, nele contém os dados de todos os usuários cadastrados e a quantidade de profissionais cadastrados de acordo com a profissão;<br/>
 8- No settings há a opção de fazer a Atualização dos dados de apenas 3 campos, Ainda em settings é possível excluir a sua conta; <br/>
 9- Existe também uma página chamada upload, o arquivo enviado é carregano em uma pasta chamada "uploads" que se encontra no server(back-end).
+
+Obs: O projeto não foi pensado sobre a responsividade, então dependendo da resolução do monitor a experiencia pode ser diferente.
+
+![](client/public/readmeimg.png)

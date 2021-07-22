@@ -81,7 +81,6 @@ export default function Register1Component() {
                     <option value="feminino">Feminino</option>
                 </select>
                 <div className={styles.buttonProximo}>
-
                     <button onClick={nextRegister1}>Próximo</button>
                 </div>
             </div>

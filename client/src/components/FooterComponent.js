@@ -1,9 +1,8 @@
 import styles from '../styles/Footer.module.css'
 
-export default function FooterComponent(){
+export default function FooterComponent() {
 
-    
-    return(
+    return (
         <div className={styles.container}>
             <div className={styles.div1}>
                 <h1>Salvus.</h1>
@@ -30,7 +29,6 @@ export default function FooterComponent(){
                 </div>
             </div>
             <div className={styles.logosalvus}>
-
             </div>
         </div>
     )

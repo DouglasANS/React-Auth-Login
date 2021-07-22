@@ -8,7 +8,6 @@ const { isEmpty } = require('lodash');
 export default function Register1Component() {
 
     const [valor, setvalor] = useState(false)
-
     const {
         username,
         date,
@@ -30,17 +29,8 @@ export default function Register1Component() {
             isEmpty(email) || isEmpty(cpf) ||
             isEmpty(telefone) || isEmpty(password) ||
             isEmpty(sexo)) {
-            console.log("algum ta vazio")
             alert('Preencha os campos em branco')
         } else {
-            console.log(username)
-            console.log(date)
-            console.log(email)
-            console.log(cpf)
-            console.log(telefone)
-            console.log(password)
-            console.log(sexo)
-            console.log("todos preenchidos")
             setvalor(true)
         }
     }
@@ -49,13 +39,10 @@ export default function Register1Component() {
         return <Redirect to='/register2' />
     }
 
-
-
     return (
         <div className={styles.container}>
             <div className={styles.caixa}>
                 <div className={styles.logo}>
-
                 </div>
                 <label>Nome: </label>
                 <input type="text" onChange={(e) => { setUsername(e.target.value) }} />

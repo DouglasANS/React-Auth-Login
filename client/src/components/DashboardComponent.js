@@ -12,17 +12,12 @@ export default function DashBoardComponent() {
     const [fonoaudiologia, setFonoaudiologia] = useState([])
     const [nutricionista, setNutricionista] = useState([])
     const [fisioterapeuta, setFisioterapeuta] = useState([])
-
     const { currentUserData } = useContext(AuthContext)
-
 
     useEffect(() => {
         CountRequest(setAll, setMedico, setEnfermeiro, setTecnicoEnfermagem, setFonoaudiologia, setNutricionista, setFisioterapeuta)
         currentUserData()
     }, [])
-
-
-
 
     return (
         <div className={styles.fundo}>

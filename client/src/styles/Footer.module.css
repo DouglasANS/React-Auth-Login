@@ -1,60 +1,67 @@
-.container{
-    display: flex;
-    background-color: rgb(123, 179, 139);
-    border-top: solid 1.5px gray;
+.container {
+	display: flex;
+	background-color: rgb(123, 179, 139);
+	border-top: solid 1.5px gray;
 }
 
-.tamanho h3{
-    font-size: 16px;
+.tamanho h3 {
+	font-size: 16px;
 }
 
-
-.tamanho{
-    width: 20%;
-    margin-left: 20px;
-    margin-top: 20px;
-    border-left: solid rgba(73, 72, 72, 0.747) 1px;
+.tamanho {
+	width: 20%;
+	margin-left: 20px;
+	margin-top: 20px;
+	border-left: solid rgba(73, 72, 72, 0.747) 1px;
 }
 
-.div1{
-    width: 20%;
-    margin-left: 20px;
-    margin-top: 20px;
+.div1 {
+	width: 20%;
+	margin-left: 20px;
+	margin-top: 20px;
 }
 
-.tamanho h1, .tamanho h2, .tamanho h3, .tamanho a{
-    margin-left: 20px;
+.tamanho h1,
+.tamanho h2,
+.tamanho h3,
+.tamanho a {
+	margin-left: 20px;
 }
 
-.logosalvus{
-    width: 20%;
-    background: url(../assets/simbolo.png);
-    background-size: cover;
+.logosalvus {
+	width: 20%;
+	background: url(../assets/simbolo.png);
+	background-size: cover;
 }
 
-
-.face{
-    background: url(../assets/faceicon.png);
-}
-.insta{
-    background: url(../assets/instaicon.png);
-}
-.linkedin{
-    background: url(../assets/linkedinicon.png);
+.face {
+	background: url(../assets/faceicon.png);
 }
 
-.face, .insta, .linkedin{
-    background-color: rgb(121, 196, 121);
-    background-size: cover;
-    border: none;
-    border-radius: 16px;
-    margin-right: 10px;
-    box-shadow: 0px 5px 7px #06791081;
-    height: 60px;
-    width: 60px;
+.insta {
+	background: url(../assets/instaicon.png);
 }
 
-.face:hover, .insta:hover, .linkedin:hover{
-    background-color: rgb(103, 161, 103);
-    box-shadow: 0px 5px 7px #04460a81;
+.linkedin {
+	background: url(../assets/linkedinicon.png);
+}
+
+.face,
+.insta,
+.linkedin {
+	background-color: rgb(121, 196, 121);
+	background-size: cover;
+	border: none;
+	border-radius: 16px;
+	margin-right: 10px;
+	box-shadow: 0px 5px 7px #06791081;
+	height: 60px;
+	width: 60px;
+}
+
+.face:hover,
+.insta:hover,
+.linkedin:hover {
+	background-color: rgb(103, 161, 103);
+	box-shadow: 0px 5px 7px #04460a81;
 }

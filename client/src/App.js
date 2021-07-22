@@ -1,5 +1,5 @@
 import './App.css';
-import {Switch, Route} from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import AuthProvider from './context/AuthContext';
 import RegisterProvider from './context/RegisterContext';
 import Login from './pages/Login';
@@ -15,27 +15,27 @@ import Upload from './pages/Upload';
 function App() {
   return (
     <>
-    <header>
-      
-    </header>
-    <main>
-      
-      <AuthProvider>
-        <RegisterProvider>
-          <Switch>
-            <Route path='/' exact component={Login}/>
-            <Route path='/upload' exact component={Upload}/>
-            <Route path='/register1' exact component={Register1}/>
-            <Route path='/register2' exact component={Register2}/>
-            <Route path='/register3' exact component={Register3}/>
-            <Route path='/dashboard' component={DashBoard}/>
-            <Route path='/ForgotPassword' component={ForgotPassword}/>
-            <Route path='/ForgotPassword2' component={ForgotPassword2}/>
-            <Route path='/settings' component={Settings}/>
-          </Switch>
-        </RegisterProvider>
-      </AuthProvider>
-    </main>
+      <header>
+
+      </header>
+      <main>
+
+        <AuthProvider>
+          <RegisterProvider>
+            <Switch>
+              <Route path='/' exact component={Login} />
+              <Route path='/upload' exact component={Upload} />
+              <Route path='/register1' exact component={Register1} />
+              <Route path='/register2' exact component={Register2} />
+              <Route path='/register3' exact component={Register3} />
+              <Route path='/dashboard' component={DashBoard} />
+              <Route path='/ForgotPassword' component={ForgotPassword} />
+              <Route path='/ForgotPassword2' component={ForgotPassword2} />
+              <Route path='/settings' component={Settings} />
+            </Switch>
+          </RegisterProvider>
+        </AuthProvider>
+      </main>
     </>
   );
 }

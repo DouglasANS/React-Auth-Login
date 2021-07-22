@@ -1,107 +1,90 @@
-
-.container{
-    display: flex;
-    background-color: rgb(255, 255, 255);
+.container {
+	display: flex;
+	background-color: rgb(255, 255, 255);
 }
 
-
 .login input {
-    margin-top: 40px;
-    border: 0;
-    border-bottom: 2px solid #9e9e9e;
-    outline: none;
-    box-sizing: border-box;
-    width: 400px;
-
+	margin-top: 40px;
+	border: 0;
+	border-bottom: 2px solid #9e9e9e;
+	outline: none;
+	box-sizing: border-box;
+	width: 400px;
 }
 
 .login input:focus {
-    border-bottom: 2px solid #26a69a;
-      
-}
-.logo{
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    background: url(../assets/logosalvus.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 200px;
+	border-bottom: 2px solid #26a69a;
 }
 
-.image{
-    width: 50%;
+.logo {
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	background: url(../assets/logosalvus.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 200px;
 }
 
-.teste{
-    height: 700px;
-    background-size: cover;
-    background-position: center;
+.image {
+	width: 50%;
 }
 
+.teste {
+	height: 700px;
+	background-size: cover;
+	background-position: center;
+}
 
-.login{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    flex: 1;
-    height: 750px;
-    width: 400px;
+.login {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	flex: 1;
+	height: 750px;
+	width: 400px;
 }
 
 .login button {
-    font-weight:bold;
-    margin-top: 20px;
-    cursor: pointer;
-    border-radius: 16px;
-    height: 50px;
-    width: 250px;
-    border: 2px;
-    background-color: rgb(168, 212, 150);
-    box-shadow: 0px 5px 7px #04460a81;
+	font-weight: bold;
+	margin-top: 20px;
+	cursor: pointer;
+	border-radius: 16px;
+	height: 50px;
+	width: 250px;
+	border: 2px;
+	background-color: rgb(168, 212, 150);
+	box-shadow: 0px 5px 7px #04460a81;
 }
 
 .login button:hover {
-    background-color: rgb(125, 180, 118);
-  
+	background-color: rgb(125, 180, 118);
 }
 
 .login h3 {
-    color: rgb(46, 88, 35);
-    font-size: 16px;
-    font-weight:normal; 
-   
-}
-.login h1{
-    color: rgb(36, 75, 26);
+	color: rgb(46, 88, 35);
+	font-size: 16px;
+	font-weight: normal;
 }
 
-.login h2{
-    color: rgb(64, 146, 44);
+.login h1 {
+	color: rgb(36, 75, 26);
 }
 
-.loginbutton{
-    margin-bottom: 20px;
+.login h2 {
+	color: rgb(64, 146, 44);
 }
 
-.text{
-    margin-left: 60px;
-    margin-right: 60px;
-    border-left: solid rgba(73, 72, 72, 0.747) 1px;
-    border-right: solid rgba(73, 72, 72, 0.747) 1px;
+.loginbutton {
+	margin-bottom: 20px;
 }
 
-
-
-/*
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-*/
-
+.text {
+	margin-left: 60px;
+	margin-right: 60px;
+	border-left: solid rgba(73, 72, 72, 0.747) 1px;
+	border-right: solid rgba(73, 72, 72, 0.747) 1px;
+}

@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from '../styles/HeaderComponent.module.css'
 import { deleteAllStorage } from '../Request/tokenService';
-
 import { Redirect } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 
@@ -21,10 +20,8 @@ export default function HeaderComponent() {
     }
 
     return (
-
         <div className={styles.container}>
             <div className={styles.logo}>
-
             </div>
             <div className={styles.element1}>
                 <h1>Bem Vindo: {currentUser}</h1>

@@ -9,7 +9,6 @@ const { isEmpty } = require('lodash');
 export default function Register2Component() {
 
     const [valor, setvalor] = useState(false)
-    const [requestCep, setRequestCep] = useState('')
 
     const {
         cep,
@@ -27,15 +26,8 @@ export default function Register2Component() {
         if (isEmpty(cep) || isEmpty(logradouro) ||
             isEmpty(cidade) || isEmpty(bairro) ||
             isEmpty(numcasa)) {
-            console.log("algum ta vazio")
             alert('Preencha os campos em branco')
         } else {
-            console.log(cep)
-            console.log(logradouro)
-            console.log(cidade)
-            console.log(bairro)
-            console.log(numcasa)
-            console.log("todos preenchidos")
             setvalor(true)
         }
     }
@@ -46,8 +38,6 @@ export default function Register2Component() {
 
     function RequestCepV() {
         Axios.get(`https://viacep.com.br/ws/${cep}/json/`).then((response) => {
-            setRequestCep(response.data)
-            console.log('kokode', requestCep)
 
             document.querySelector("[name='logradouro']").value = response.data.logradouro;
             document.querySelector("[name='cidade']").value = response.data.localidade;
@@ -63,7 +53,6 @@ export default function Register2Component() {
         <div className={styles.container}>
             <div className={styles.caixa}>
                 <div className={styles.logo}>
-
                 </div>
                 <label>CEP: </label>
                 <input type="text" onChange={(e) => { setCep(e.target.value) }} />
@@ -71,7 +60,6 @@ export default function Register2Component() {
                 <div className={styles.consultarCEP}>
                     <button onClick={RequestCepV}>Consultar CEP</button>
                 </div>
-
 
                 <label>Logradouro: </label>
                 <input type="text" name="logradouro" onChange={(e) => { setLogradouro(e.target.value) }} />

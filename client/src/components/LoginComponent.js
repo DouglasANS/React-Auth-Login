@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import Axios from 'axios';
 import styles from '../styles/Login.module.css'
-import { saveToken, saveCurrentUser, saveCurrentEmail } from '../Request/tokenService';
+import { saveToken, saveCurrentEmail } from '../Request/tokenService';
 import { Redirect } from 'react-router-dom'
-
 
 export default function LoginComponent() {
 
@@ -20,18 +19,14 @@ export default function LoginComponent() {
       if (response.data.message) {
         alert('Usuário e/ou senha inválidos')
         //Não encontrado
-        // console.log('email: ' + email + '  Senha: ' + password)
       } else {
         //Usuário encontrado 
-        //auth.setLogin(true)
         saveCurrentEmail(email)
         saveToken(true)
         setvalor(true)
       }
     })
   }
-
-
 
   if (valor) {
     return <Redirect to='/dashboard' />
@@ -41,9 +36,6 @@ export default function LoginComponent() {
     <div className={styles.container}>
 
       <div className={styles.image}>
-
-
-
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -70,24 +62,7 @@ export default function LoginComponent() {
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-
-
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       <div className={styles.login}>
         <div className={styles.logo}></div>
@@ -101,33 +76,21 @@ export default function LoginComponent() {
           <input placeholder="Password" type="password" onChange={(e) => { setPassword(e.target.value) }} />
         </div>
         <a href="/ForgotPassword"><div>Esqueceu a senha?</div></a>
-
         <div>
           <button className={styles.loginbutton} onClick={checkLogin}>Login</button>
         </div>
-
-
         <h3 className={styles.text}>
           Faça parte dessa rede de profissionais para que
           juntos possamos melhorar o cuidado, satisfação e
           qualidade de vida de quem mais precisa.
-          Através do sistema Salvus podemos direcionar 
+          Através do sistema Salvus podemos direcionar
           profissionais em diferentes localidades
           do país, de forma rápida e segura.
         </h3>
         <div >
           <a href="/register1"><button>Register</button></a>
         </div>
-
       </div>
-
-
-
-
-
-
-
-
     </div>
   )
 }

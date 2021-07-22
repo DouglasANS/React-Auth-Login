@@ -1,7 +1,5 @@
 import styles from '../styles/CardDashboardComponent.module.css'
 
-const asd = require('../')
-
 export default function CardDashboardComponent(props) {
 
     return (
@@ -28,8 +26,6 @@ export function Card2(props) {
             <div>
                 <img src="/medicoicon.png" />
             </div>
-
-
         </div>
     )
 }
@@ -45,8 +41,6 @@ export function Card3(props) {
             <div>
                 <img src="/enfermeiroicon.png" />
             </div>
-
-
         </div>
     )
 }
@@ -62,8 +56,6 @@ export function Card4(props) {
             <div>
                 <img src="/tecenfermagemicon.png" />
             </div>
-
-
         </div>
     )
 }
@@ -79,8 +71,6 @@ export function Card5(props) {
             <div>
                 <img src="/fonoicon.png" />
             </div>
-
-
         </div>
     )
 }
@@ -96,8 +86,6 @@ export function Card6(props) {
             <div>
                 <img src="/nutricionistaicon.png" />
             </div>
-
-
         </div>
     )
 }
@@ -113,8 +101,6 @@ export function Card7(props) {
             <div>
                 <img src="/fisioterapiaicon.png" />
             </div>
-
-
         </div>
     )
 }

@@ -35,7 +35,6 @@ export default function SettingsComponent() {
     function deleteAccount() {
         let deletarAccount = window.confirm("Deseja deletar a conta?")
         if (deletarAccount) {
-            console.log('deletou a conta')
             setvalor(true)
             deleteAllStorage()
             Axios.delete(`http://localhost:3002/api/delete/${id}`).then((response) => { })
@@ -46,12 +45,10 @@ export default function SettingsComponent() {
         return <Redirect to='/' />
     }
 
-
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.fundoimg}>
-
                 </div>
                 <div className={styles.upload}>
                     <div className={styles.formularioUpload}>
@@ -72,7 +69,6 @@ export default function SettingsComponent() {
                             <div className={styles.usericon}>
                                 <img src='/usericon.png' />
                             </div>
-                            
                             <h2>CPF: {dataCurrentUser.cpf}</h2>
                         </div>
                         <div className={styles.buttonDeletar} >
@@ -82,9 +78,7 @@ export default function SettingsComponent() {
                             <h3>Caso aperte em "Deletar conta", você aceita que perdera todos os dados, assim como o vínculo com a salvus.</h3>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </>
     )

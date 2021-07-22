@@ -29,7 +29,7 @@ export default function LoginComponent() {
   }
 
   if (valor) {
-    return <Redirect to='/Home' />
+    return <Redirect to='/dashboard' />
   }
 
   return (

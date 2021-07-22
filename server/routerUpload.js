@@ -15,7 +15,6 @@ const routerUpload = express.Router()
 
 // ---------  Upload Image  ---------
 routerUpload.post('/upload', upload.single('file'), (req, res) =>{
-    console.log('body', req.body)
      res.redirect('http://localhost:3000/')
  })
 

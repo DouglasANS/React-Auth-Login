@@ -11,7 +11,6 @@ import ForgotPassword from './pages/ForgotPassword'
 import ForgotPassword2 from './pages/ForgotPassword2'
 import Settings from './pages/Settings'
 import Upload from './pages/Upload';
-import Home from './pages/Home';
 
 function App() {
   return (
@@ -25,7 +24,6 @@ function App() {
           <RegisterProvider>
             <Switch>
               <Route path='/' exact component={Login} />
-              <Route path='/Home' exact component={Home} />
               <Route path='/upload' exact component={Upload} />
               <Route path='/register1' exact component={Register1} />
               <Route path='/register2' exact component={Register2} />
